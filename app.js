@@ -10,13 +10,13 @@ const outputBox = document.querySelector('#output-box');
 checkButton.addEventListener('click', checkHandeler); 
 
 function checkHandeler(){
-    var inPrice = initialPrice.value;
-    var stQuantity = stocksQuantity.value;
-    var curPrice = currentPrice.value;
+    var inPrice = Number(initialPrice.value);
+    var stQuantity = Number(stocksQuantity.value);
+    var curPrice = Number(currentPrice.value);
     calculateProfitAndLoss(inPrice, stQuantity, curPrice);
 
     if(inPrice&&stQuantity&&curPrice)
-    compareVlues(inPrice.value, luckyNumber.value, curPrice.value);
+    compareVlues(inPrice, luckyNumber.value, curPrice.value);
     else
     outputBox.innerText="Please Enter all fields!"
 
