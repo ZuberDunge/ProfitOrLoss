@@ -3,6 +3,7 @@ const stocksQuantity = document.querySelector('#stocks-quantity');
 const currentPrice = document.querySelector('#current-price');
 const checkButton = document.querySelector('#check-button');
 const outputBox = document.querySelector('#output-box');
+var loadingImg  = document.querySelector('.loading-img');
 
 
 
@@ -26,17 +27,52 @@ function checkHandeler(){
 function calculateProfitAndLoss(initial, quantity, current) {
 
     if (initial > current) {
-        var loss = (initial - current)*quantity;
-        var lossPercentage = (loss/initial)*100;
+     
+
+setTimeout(function(){  
+    var loss = (initial - current)*quantity;
+    var lossPercentage = (loss / (initial * quantity)) * 100;
+
+
+
+
+        loadingImg.style.display = `none`;       
+        outputBox.style.display = `block`;    
         outputBox.innerText=`the loss is ${loss} and the percent is ${lossPercentage}%`;
+        }, 3000);
+
+        loadingImg.style.display = `block`;      
+        outputBox.innerText = 'Hang on our robot is working on it!';
+        outputBox.style.display = `block`;
+
+
+
+        
     } else if (current > initial) {
-var profit = (current-initial)*quantity;
-var profitPercentage = (profit/initial)*100;
-outputBox.innerText=`the profit is ${profit} and the percent is ${profitPercentage}%`;
+        setTimeout(function(){ 
 
-    } else {
-outputBox.innerText="No Gain! No Pain!";
+            var profit = (current-initial)*quantity;
+            var profitPercentage = (profit / (initial * quantity)) * 100;
+            
+            loadingImg.style.display = `none`;       
+            outputBox.style.display = `block`;    
+            outputBox.innerText=`the profit is ${profit} and the percent is ${profitPercentage}%`;
 
+            }, 3000);
+
+            loadingImg.style.display = `block`;      
+            outputBox.innerText = 'Hang on our robot is working on it!';
+            outputBox.style.display = `block`;
+     } else {
+            setTimeout(function(){ 
+            loadingImg.style.display = `none`;       
+            outputBox.style.display = `block`;    
+            outputBox.innerText="No Gain! No Pain!";
+            }, 3000);
+
+            loadingImg.style.display = `block`;      
+            outputBox.innerText = 'Hang on our robot is working on it!';
+            outputBox.style.display = `block`;
     }
 }
 

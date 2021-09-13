@@ -5,6 +5,10 @@
     --white: white;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--primary-dark);
@@ -15,7 +19,7 @@ body {
 input,
 label {
     display: block;
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
@@ -54,7 +58,7 @@ button {
 }
 
 #output-box {
-    width: 90%;
+    width: 100%;
     padding: 1rem;
     font-size: larger;
     font-weight: bold;
@@ -65,13 +69,17 @@ button {
 
 /**Footer**/
 .footer {
+ 
     background-color: #191F42;
     color: white;
     padding: 0.75rem 1rem;
     text-align: center;
-   
-    
-    padding-bottom: 200px;
+position: fixed;
+bottom: 0;
+right: 0;
+left: 0;
+margin-top: 2rem;
+
 }
 
 .footer .link {
@@ -110,4 +118,17 @@ button {
 .link {
     text-decoration: none;
     padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px) {
+
+    .footer { 
+        margin-top: 2rem;
+   position:static;
+   border-radius: 1rem; 
+    }
+}
+.loading-img img{
+    width: 100%;
+
 }
