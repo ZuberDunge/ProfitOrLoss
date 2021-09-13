@@ -19,6 +19,7 @@ function checkHandeler(){
     if(inPrice&&stQuantity&&curPrice)
     compareVlues(inPrice, luckyNumber.value, curPrice.value);
     else
+    outputBox.style.display = `block`;
     outputBox.innerText="Please Enter all fields!"
 
 
@@ -64,15 +65,9 @@ setTimeout(function(){
             outputBox.innerText = 'Hang on our robot is working on it!';
             outputBox.style.display = `block`;
      } else {
-            setTimeout(function(){ 
-            loadingImg.style.display = `none`;       
-            outputBox.style.display = `block`;    
+              
             outputBox.innerText="No Gain! No Pain!";
-            }, 3000);
-
-            loadingImg.style.display = `block`;      
-            outputBox.innerText = 'Hang on our robot is working on it!';
-            outputBox.style.display = `block`;
+            
     }
 }
 
