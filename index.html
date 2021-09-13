@@ -15,13 +15,13 @@
 
 <main>
 <label for="initial-price">Initial Price <br>
-<input id="initial-price" type="number" placeholder="Enter Initial Price"/></label>
+<input required id="initial-price" type="number" placeholder="Enter Initial Price"/></label>
 
 <label for="stocks-quantity">Quanitity of the Stocks<br>
-<input id="stocks-quantity" type="number" placeholder="Enter the number of stocks"/></label>
+<input required id="stocks-quantity" type="number" placeholder="Enter the number of stocks"/></label>
 
 <label for="current-price">Current Price of the stocks<br>
-<input id="current-price" type="number" placeholder="Enter the Current Price of the stocks"/></label>
+<input required id="current-price" type="number" placeholder="Enter the Current Price of the stocks"/></label>
 
 <button id="check-button">Tell Me!!</button>
 
@@ -29,6 +29,7 @@
     <img src="./loading.gif" alt="" srcset="">
   </div>
         <div id="output-box" style="display: none;"></div>
+        <div id="error-box" style="display: none;"></div>
       </main>
 
 </main>
