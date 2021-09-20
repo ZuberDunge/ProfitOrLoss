@@ -7,8 +7,6 @@ const errorBox = document.querySelector('#error-box');
 var loadingImg  = document.querySelector('.loading-img');
 
 
-
-
 checkButton.addEventListener('click', checkHandeler); 
 
 function checkHandeler(){
@@ -20,16 +18,11 @@ function checkHandeler(){
     calculateProfitAndLoss(inPrice, stQuantity, curPrice);
     else
    errorBox.style.display = `block`;
-   errorBox.innerText="Please Enter all fields!"
-
-    
+   errorBox.innerText="Please Enter all fields!" 
 
 }
 
 function calculateProfitAndLoss(initial, quantity, current) {
-
-
-
 
     if (initial > current) {
         setTimeout(function(){  
@@ -44,8 +37,6 @@ function calculateProfitAndLoss(initial, quantity, current) {
                 loadingImg.style.display = `block`;      
                 outputBox.innerText = 'Hang on our robot is working on it!';
                 outputBox.style.display = `block`;
-
-
 
                 
             } else if (current > initial) {
