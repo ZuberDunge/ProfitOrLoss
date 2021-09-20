@@ -56,6 +56,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
                     outputBox.style.display = `block`;
             } else {
                 errorBox.style.display = `none`;
+                outputBox.style.display = `block`;
                     outputBox.innerText="No Gain! No Pain!";
                     
             }
