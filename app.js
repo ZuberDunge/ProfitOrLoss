@@ -69,6 +69,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
             var profitPercentage = (profit / (initial * quantity)) * 100;
             loadingImg.style.display = `none`;
             outputBox.style.display = `block`;
+            coverImg.style.display = `block`;
             processBox.style.display = `none`;
             outputBox.innerHTML = `the profit is <span class="profit">${profit} </span> <br/> 
             and the percent is <span class="profit"> ${Math.floor(profitPercentage)}%</span>`;
