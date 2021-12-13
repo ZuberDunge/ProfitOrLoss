@@ -43,7 +43,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
             var loss = (initial - current) * quantity;
             var lossPercentage = (loss / (initial * quantity)) * 100;
             loadingImg.style.display = `none`;
-
+            coverImg.style.display = `block`;
             processBox.style.display = `none`;
             outputBox.style.display = `block`;
             outputBox.innerHTML = `the loss is 
