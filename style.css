@@ -25,7 +25,7 @@ body {
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 10px 1rem;
+    padding: 0px 1rem;
     background-color: var(--primary-dark);
     align-items: center;
     color: var(--primary-color);
@@ -317,6 +317,9 @@ a {
         text-align: center;
     }
 
+    .about {
+        padding: 0.5rem;
+    }
 }
 
 .hero-img img {
