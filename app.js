@@ -9,6 +9,7 @@ const errorBox = document.querySelector('#error-box');
 var loadingImg = document.querySelector('.loading-img');
 var coverImg = document.querySelector('.cover-img');
 var scam1992 = document.getElementById("myAudio");
+const aboutApp = document.querySelector(".about-app")
 
 resetButton.addEventListener("click", () => {
     initialPrice.value = "";
@@ -16,6 +17,7 @@ resetButton.addEventListener("click", () => {
     currentPrice.value = "";
     scam1992.pause()
     outputBox.style.display = `none`;
+    aboutApp.style.display = `flex`;
     coverImg.style.display = `none`;
 })
 checkButton
@@ -35,7 +37,7 @@ function checkHandeler() {
 }
 
 function calculateProfitAndLoss(initial, quantity, current) {
-
+    aboutApp.style.display = `none`;
     if (initial > current) {
         setTimeout(function () {
             var loss = (initial - current) * quantity;
@@ -51,8 +53,9 @@ function calculateProfitAndLoss(initial, quantity, current) {
         }, 3000);
         scam1992.pause()
         errorBox.style.display = `none`;
+        processBox.style.display = `block`;
         loadingImg.style.display = `block`;
-        processBox.innerText = 'Hang on our robot is working on it!';
+        processBox.innerText = 'Hang on Jethalal is working on it!';
         outputBox.style.display = `block`;
         coverImg.innerHTML = ``
         outputBox.innerHTML = ``
@@ -78,7 +81,7 @@ function calculateProfitAndLoss(initial, quantity, current) {
         loadingImg.style.display = `block`;
         outputBox.innerHTML = ``
         processBox.style.display = `block`;
-        processBox.innerText = 'Hang on our robot is working on it!';
+        processBox.innerText = 'Hang on Jethalal is working on it!';
         outputBox.style.display = `block`;
     } else {
         errorBox.style.display = `none`;
